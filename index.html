@@ -5,7 +5,227 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Journey - YOGYAKARTA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: blanchedalmond;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+#judul {
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0.3);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+.card-body {
+   text-align: center;
+}
+
+  .card-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: #888;
+    font-size: 0.9rem;
+}
+.penjelasan {
+    padding: 50px;
+    position: relative;
+    background-color: #3586ff;
+    padding: 100px;
+}
+.penjelasan h2 {
+    font-size: 3em;
+    color: palevioletred;
+    margin-bottom: 10px;
+}
+.penjelasan p{
+    font-size: 1em;
+    color: pink;
+    font-weight: 300;
+}
+
+.kab {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+}
+.kab a {
+    color: black;
+}
+
+.kab h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+.kab p {
+   font-size: 1.5rem;
+   margin-bottom: 2rem;
+}
+  
+.kab .btn {
+   margin: 5px;
+   font-size: 1.5rem;
+   padding: 1rem 2rem;
+   margin: 1rem;
+   border-radius: 5px;
+   background-color: transparent;
+}
+.kab .btn:hover {
+    transform: scale(1.1);
+    background-color: #2562be;
+}
+  
+footer {
+    position: relative;
+    margin-top: 200px;
+    width: 100;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .sosmed_icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+footer .sosmed_icon li a{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: .5s;
+}
+
+footer .sosmed_icon li a:hover{
+    transform: translateY(-10px);
+}
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(/assets/media/wave.png);
+    background-size: 1000px 100px; 
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+@keyframes animateWave{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave2 2.5s linear infinite;
+}
+@keyframes animateWave2{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.7;
+    bottom: 15px;
+    animation: animateWave3 3.2s linear infinite;
+}
+@keyframes animateWave3{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 20px;
+    animation: animateWave4 2s linear infinite;
+}
+@keyframes animateWave4{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+
+
+    </style>
   </head>
 
   <body>
@@ -23,10 +243,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Explore</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Support</a>
+                <a class="nav-link" href="#start-journey">Explore</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
@@ -45,17 +262,75 @@
             <img src="assets/media/tebingbreksi.jpg" class="d-block w-100"alt="tebing breksi">
             <div class="carousel-caption d-none d-md-block">
               <h5>GUNUNG KIDUL</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+              <p>Tebing Breksi</p>
             </div>
+        </div>
+        <div class="carousel-item active">
+          <img src="assets/media/parangtritis-2.jpeg" class="d-block w-100"alt="tebing breksi">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>BANTUL</h5>
+            <p>Pantai Parangtritis</p>
+          </div>
+        </div>
+        <div class="carousel-item active">
+          <img src="assets/media/jogja-count.jpg" class="d-block w-100"alt="tebing breksi">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>KOTA JOGJA</h5>
+            <p>Malioboro</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="kabupaten">
-      <div>
-
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="assets/media/bantul-count.JPG" class="card-img-top" alt="Bantul">
+            <div class="card-body">
+              <h5 class="card-title">Bantul</h5>
+              <p class="card-text">Wisata terhits: 70+</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="assets/media/gunungkidul-count.jpg" class="card-img-top" alt="Gunung Kidul">
+            <div class="card-body">
+              <h5 class="card-title">Gunung Kidul</h5>
+              <p class="card-text">Wisata terhits: 80+</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="assets/media/kulonprogo-count.jpg" class="card-img-top" alt="Kulon Progo">
+            <div class="card-body">
+              <h5 class="card-title">Kulon Progo</h5>
+              <p class="card-text">Wisata terhits: 40+</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="assets/media/sleman-count.jpg" class="card-img-top" alt="Sleman">
+            <div class="card-body">
+              <h5 class="card-title">Sleman</h5>
+              <p class="card-text">Wisata terhits: 90+</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="assets/media/jogja-count.jpg" class="card-img-top" alt="Yogyakarta">
+            <div class="card-body">
+              <h5 class="card-title">KOTA Yogyakarta</h5>
+              <p class="card-text">Wisata terhits: 60+</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
 
     <div class="penjelasan container">
       <h2 class="justify-content-center">DAERAH ISTIMEWA YOGYAKARTA</h2>
@@ -70,9 +345,9 @@
         </p>
     </div>
 
-    <div class="kab container">
+    <div class="kab container" id="start-journey">
       <div>
-        <h1>JOURNEY YOGYAKARTA</h1>
+        <h1>START YOUR JOURNEY</h1>
         <p>Explore the Beauty of Yogyakarta</p>
         <a href="sleman.html" class="btn btn-primary">Sleman</a>
         <a href="gunungkidul.html" class="btn btn-primary">Gunung Kidul</a>
@@ -81,18 +356,7 @@
         <a href="kulonprogo.html" class="btn btn-primary">Kulon Progo</a>
       </div>
     </div>
-<!--
-    <div class="kab container">
-      <h3>Start Your journey.</h3>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" ><a href="bantul.html" style="color:white" class="link-offset-2 link-underline link-underline-opacity-0">BANTUL</a></button>
-        <button type="button" class="btn btn-primary"><a href="gk.html" style="color:white" class="link-offset-2 link-underline link-underline-opacity-0">GUNUNG KIDUL</a></button>
-        <button type="button" class="btn btn-primary"><a href="kp.html" style="color:white" class="link-offset-2 link-underline link-underline-opacity-0">KULON PROGO</a></button>
-        <button type="button" class="btn btn-primary"><a href="sleman.html" style="color:white" class="link-offset-2 link-underline link-underline-opacity-0">SLEMAN</a></button>
-        <button type="button" class="btn btn-primary"><a href="yk.html" style="color:white" class="link-offset-2 link-underline link-underline-opacity-0">YOGYAKARTA</a></button>
-      </div>
-    </div>
-    -->
+
     <!--FOOTER-->
     <footer>
       <div class="waves">
@@ -108,9 +372,35 @@
           <li><a href="#"><ion-icon name="share-social-outline"></ion-icon></a></li>
         </ul>
       </div>
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-4">
+            <h5 class="mb-3">Contact</h5>
+            <p><ion-icon name="call-outline"></ion-icon> +62 1234564948</p>
+            <p><ion-icon name="mail-outline"></ion-icon> info@journeyyogyakarta.com</p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mb-3">Journey YOGYAKARTA</h5>
+            <p>Website ini bertujuan untuk mempromosikan dan mengenalkan tempat-tempat wisata di Yogyakarta kepada pengunjung.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="assets/media/logo.png" alt="Logo" class="img-fluid">
+          </div>
+        </div>
+      </div>
     </footer>
     
-    <script src="assets/js/script.js"></script>
+    <script>
+      let judul = document.getElementById('judul')
+let DIY = document.getElementById('DIY')
+
+window.addEventListener('scroll', () => {
+    let value = window.scrollY;
+
+    judul.style.marginTop = value * 1.5 + 'px';
+    DIY.style.bottom = value * 1.5 + 'px';
+});
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
